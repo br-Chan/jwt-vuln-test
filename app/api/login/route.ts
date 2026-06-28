@@ -1,6 +1,6 @@
-import AuthService from "@/lib/auth";
-import { USERS } from "@/lib/mock-users";
-import { TOKEN_EXPIRY_TIME, UserRole } from "@/types/auth";
+import AuthService from "@/app/lib/auth";
+import { USERS } from "@/app/lib/mock-users";
+import { TOKEN_EXPIRY_TIME, UserRole } from "@/app/types/auth";
 import { NextResponse } from "next/server";
 
 export const POST = async (request: Request) => {

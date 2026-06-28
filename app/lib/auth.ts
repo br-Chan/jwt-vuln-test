@@ -1,4 +1,4 @@
-import { AUTH_COOKIE_NAME, AuthPayload, AuthUser } from '@/types/auth';
+import { AUTH_COOKIE_NAME, AuthPayload, AuthUser } from '@/app/types/auth';
 import jwt, { SignOptions } from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 

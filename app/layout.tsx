@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import AuthService from "@/lib/auth";
-import { AuthProvider } from "@/lib/auth-context";
-import type { AuthUser } from "@/types/auth";
+import AuthService from "@/app/lib/auth";
+import { AuthProvider } from "@/app/lib/auth-context";
+import type { AuthUser } from "@/app/types/auth";
 import "./globals.css";
-import { LogoutButton } from "@/components/LogoutButton";
+import { LogoutButton } from "@/app/components/LogoutButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useAuth } from "@/lib/auth-context";
+import { useAuth } from "@/app/lib/auth-context";
 import Link from "next/link";
 
 export default function AdminPage() {

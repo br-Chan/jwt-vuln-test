@@ -1,6 +1,6 @@
 "use client";
 
-import { type AuthUser } from "@/types/auth";
+import { type AuthUser } from "@/app/types/auth";
 import { createContext, useContext } from "react";
 
 type AuthContextValue = {

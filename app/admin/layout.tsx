@@ -1,4 +1,4 @@
-import AuthService from "@/lib/auth";
+import AuthService from "@/app/lib/auth";
 import { redirect } from "next/navigation";
 
 export default async function AdminLayout({
