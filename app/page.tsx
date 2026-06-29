@@ -1,22 +1,6 @@
 import Link from "next/link";
-import AuthService from "./lib/auth";
-import { UserRole } from "./types/auth";
 
 export default function Home() {
-  const authService = new AuthService();
-
-  const user = authService.decodeJWT("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaWNlIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3ODI3MDA0ODQsImV4cCI6MTc4MjcwNDA4NH0.Sr1UfInW6qmy2n4SnWn76pRlJAeee6jAucI9WCiFfCo") as { username: string; role?: string } | null;
-
-  const newUser = {
-    username: user?.username ?? "",
-    role: "admin" as UserRole,
-  };
-
-  const newToken = authService.signJWT(newUser, { expiresIn: "1h" });
-
-  console.log("new token: ", newToken);
-
-  console.log("decoded token: ", authService.decodeJWT(newToken));
   return (
     <main className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top,#f8fafc,#e2e8f0_45%,#cbd5e1)] px-6 py-12">
       <section className="w-full max-w-3xl rounded-3xl border border-slate-200/70 bg-white/90 p-8 shadow-2xl shadow-slate-900/5 backdrop-blur sm:p-10">

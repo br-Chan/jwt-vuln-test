@@ -1,6 +1,6 @@
 import AuthService from "@/app/lib/auth";
 import { USERS } from "@/app/lib/users";
-import { TOKEN_EXPIRY_TIME, UserRole } from "@/app/types/auth";
+import { TOKEN_EXPIRY_TIME } from "@/app/types/auth";
 import { NextResponse } from "next/server";
 
 export const POST = async (request: Request) => {
@@ -20,7 +20,7 @@ export const POST = async (request: Request) => {
   }
   
   const token = authService.signJWT(
-    { username, role: user.role as UserRole },
+    { username, role: user.role },
     { expiresIn: TOKEN_EXPIRY_TIME },
   );
 
