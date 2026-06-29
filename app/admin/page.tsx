@@ -1,8 +1,5 @@
-"use client";
-
-import Link from "next/link";
-
 export default function AdminPage() {
+	const flag = process.env.FLAG ?? "ctf{}";
 
 	return (
 		<main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-12 text-white">
@@ -12,7 +9,10 @@ export default function AdminPage() {
 				</p>
 				<h1 className="mt-4 text-4xl font-semibold tracking-tight">Admin dashboard</h1>
 				<p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
-					You are signed in as an admin. Flag goes here TODO TODO.
+					You are signed in as an admin.
+				</p>
+				<p className="mt-4 font-mono text-sm text-emerald-300">
+					{flag}
 				</p>
 			</section>
 		</main>
