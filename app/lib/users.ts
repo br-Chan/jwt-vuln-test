@@ -1,7 +1,6 @@
 /**
- * TODO (meta): make this a hidden database to avoid confusion in students??
+ * Default users for authentication.
  */
-
 export const USERS = [
   {
     username: "alice",

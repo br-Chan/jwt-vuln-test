@@ -1,23 +1,13 @@
 "use client";
 
-import { useAuth } from "@/app/lib/auth-context";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Login() {
     const router = useRouter();
-    const { user } = useAuth();
     const [error, setError] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    // useEffect(() => {
-    //     if (!user) {
-    //         return;
-    //     }
-
-    //     router.replace(user.role === "admin" ? "/admin" : "/profile");
-    // }, [router, user]);
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();

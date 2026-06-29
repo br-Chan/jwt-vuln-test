@@ -1,5 +1,5 @@
 import AuthService from "@/app/lib/auth";
-import { USERS } from "@/app/lib/mock-users";
+import { USERS } from "@/app/lib/users";
 import { TOKEN_EXPIRY_TIME, UserRole } from "@/app/types/auth";
 import { NextResponse } from "next/server";
 
