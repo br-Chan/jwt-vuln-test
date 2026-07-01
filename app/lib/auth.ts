@@ -2,7 +2,7 @@ import { AUTH_COOKIE_NAME, AuthPayload, AuthUser } from '@/app/types/auth';
 import jwt, { SignOptions } from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 
-const JWT_SECRET = "TVqTvd7y5nj8UAu9lvgldmeZnVhZGSDcxjpy5kyENAp";
+const JWT_SECRET = process.env.JWT_SECRET || "";
 
 export default class AuthService {
   public signJWT(payload: AuthPayload, options?: SignOptions): string {
