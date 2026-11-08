@@ -1,3 +1,7 @@
+This application is an example of how JWT authentication might be vulnerable to attack - although this particular attack has been patched in modern versions of JWT libraries. This repo has been left public for posterity. Can you find the vulnerability and gain access to the admin page of this website?
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
